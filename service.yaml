@@ -1,0 +1,14 @@
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  labels:
+    app: "helloWorld"
+  name: "helloWorld"
+spec:
+  ports:
+  - port: 9095
+    protocol: "TCP"
+    targetPort: 9095
+  selector:
+    app: "helloWorld"
+  type: "NodePort"
