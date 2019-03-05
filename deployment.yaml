@@ -1,0 +1,21 @@
+---
+apiVersion: "extensions/v1beta1"
+kind: "Deployment"
+metadata:
+  labels:
+    app: "helloWorld"
+  name: "helloworld"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "helloWorld"
+    spec:
+      containers:
+      - image: "helloworld"
+        imagePullPolicy: "IfNotPresent"
+        name: "helloworld"
+        ports:
+        - containerPort: 9095
+          protocol: "TCP"
