@@ -1,10 +1,16 @@
+---
 apiVersion: "v1"
 kind: "Service"
 metadata:
+  annotations: {}
+  finalizers: []
   labels:
     app: "helloWorld"
-  name: "helloWorld"
+  name: "helloworld"
+  ownerReferences: []
 spec:
+  externalIPs: []
+  loadBalancerSourceRanges: []
   ports:
   - port: 9095
     protocol: "TCP"
@@ -12,3 +18,4 @@ spec:
   selector:
     app: "helloWorld"
   type: "NodePort"
+---
