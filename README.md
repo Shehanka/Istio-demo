@@ -23,5 +23,3 @@ Step 07: Enable istio sidecar injection
 `kubectl label namespace default istio-injection=enabled --overwrite`}
 
 Step 08: Apply kubernetes artifacts 
-
-_Now you can continue the tutorial !!!_
